@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp"
+    android:id="@+id/newsLayer"
+    android:paddingLeft="@dimen/margin"
+    android:paddingRight="@dimen/margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+
+
+    <ImageView
+        android:id = "@+id/imgNewsImage"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        android:src = "@drawable/give"
+
+        android:layout_alignParentLeft="true"
+        android:adjustViewBounds="true" />
+    <TextView
+        android:id = "@+id/txtNewsHeadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize = "@dimen/headerTextSize"
+        android:textStyle="bold"
+
+        android:layout_below="@id/imgNewsImage"
+        android:textColor="@android:color/background_dark"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:text="This is the headline holder. It's Bold to be clearly visible."/>
+
+
+
+    <TextView
+        android:id = "@+id/txtNewsDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtNewsHeadline"
+
+        android:textSize = "@dimen/textSize"
+        android:textColor = "#000000"
+        android:layout_marginTop="10dp"
+        android:text="This is the Briefing holder. It will contain a brief description of what the news is all about. When you click more you will get a detailed summary of the news. Excellent..."/>
+
+    <TextView
+        android:id = "@+id/txtNewsShowMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text = "Show More"
+        android:visibility="gone"
+        android:textSize="@dimen/textSize"
+        android:layout_below="@id/txtNewsDetails"
+        android:layout_alignLeft="@id/txtNewsDetails"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+    <TextView
+        android:id = "@+id/txtNewsTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:layout_below="@id/txtNewsDetails"
+        android:textStyle="bold"
+        android:text="Date: 9/08/2016"
+
+        android:textSize="@dimen/textSize"
+        android:layout_alignBottom="@id/txtNewsShowMore"
+        android:layout_alignParentRight="true"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/txtfull_article"
+    android:visibility="invisible"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/txtNewsTime"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/blackColor"></View>
+
+
+</RelativeLayout>
