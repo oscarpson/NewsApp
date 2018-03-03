@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if (savedInstanceState == null) {
-            //Fragment fragment = null;
+
             Fragment fragment=null;
             Class fragmentClass = null;
             fragmentClass = Tabs.class;
