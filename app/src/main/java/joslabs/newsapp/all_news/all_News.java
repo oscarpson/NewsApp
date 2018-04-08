@@ -136,8 +136,8 @@ public class all_News extends Fragment implements SwipeRefreshLayout.OnRefreshLi
 
                 if (error instanceof NoConnectionError) {
                     Toast.makeText(getContext(),"No Internet",Toast.LENGTH_LONG).show();
-                    Intent intent=new Intent(getContext(), NointernetActivity.class);
-                    startActivity(intent);
+                   new SnackClass(coordinatorLayout,"internet error");
+
                 }
 
 
@@ -158,7 +158,6 @@ public class all_News extends Fragment implements SwipeRefreshLayout.OnRefreshLi
 
         int x = 2;// retry count
         stringRequest.setRetryPolicy(new
-
                 DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS*48,
                 x, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         //stringRequest.setRetryPolicy(new DefaultRetryPolicy(DefaultRetryPolicy.DEFAULT_TIMEOUT_MS, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));

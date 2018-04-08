@@ -36,6 +36,7 @@ import java.util.List;
 import java.util.Map;
 
 import joslabs.newsapp.R;
+import joslabs.newsapp.all_news.SnackClass;
 import joslabs.newsapp.all_news.all_NewsAdapter;
 import joslabs.newsapp.all_news.all_Newsget;
 import joslabs.newsapp.check_network.NointernetActivity;
@@ -139,8 +140,8 @@ public class all_SourceTech extends Fragment implements SwipeRefreshLayout.OnRef
 
                 if (error instanceof NoConnectionError) {
                     Toast.makeText(getContext(),"No Internet",Toast.LENGTH_LONG).show();
-                    Intent intent=new Intent(getContext(), NointernetActivity.class);
-                    startActivity(intent);
+                    new SnackClass(coordinatorLayout,"internet error");
+
                 }
 
 

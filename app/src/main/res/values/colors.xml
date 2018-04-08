@@ -7,4 +7,5 @@
     <color name="hintColor">#808283 </color>
     <color name="blackColor">#000000</color>
     <color name="grayColor">#BEBEBF</color>
+    <color name="red">#E5080B</color>
 </resources>
